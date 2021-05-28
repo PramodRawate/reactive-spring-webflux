@@ -33,8 +33,8 @@ Flux<Integer> integerFlux = Flux.range(1, 5);
 ```
 
 **5. Mono.justOrEmpty(@Nullable Optional<? extends T> data) -** Creates a flux of empty of passed data which is
-```shell
 optional. Used in case if we want to create an empty mono.
+```shell
 Mono<Object> mono = Mono.justOrEmpty(null);
 ```
 
@@ -54,7 +54,9 @@ Mono<String> stringMono = Mono.fromSupplier(stringSupplier);
 
 ## Error handling in Webflux
 **1. onErrorResume(() -> {}) -**  Do something such as performing some operation, returning a flux with default values when Exception occurs.,etc.
+
 **2. onErrorReturn() -**  Return a default value when exception occurs
+
 **3. onErrorMap() -** map the occurred exception to some other exception.
 
 ### Filter Operation
