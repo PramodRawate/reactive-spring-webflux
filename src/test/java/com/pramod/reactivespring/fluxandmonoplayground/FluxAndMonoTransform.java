@@ -19,7 +19,7 @@ public class FluxAndMonoTransform {
                 .log();
 
         StepVerifier.create(namesFlux)
-                .expectNext("Adam Denial", "Jack Denial", "JayDenial", "Jenny Denial")
+                .expectNext("Adam Denial", "Jack Denial", "Jay Denial", "Jenny Denial")
                 .verifyComplete();
     }
 
@@ -41,7 +41,7 @@ public class FluxAndMonoTransform {
                 .log();
 
         StepVerifier.create(namesFlux)
-                .expectNext(4,4,4,5)
+                .expectNext(4,4,3,5)
                 .verifyComplete();
     }
 
@@ -53,7 +53,7 @@ public class FluxAndMonoTransform {
                 .log();
 
         StepVerifier.create(namesFlux)
-                .expectNext(4,4,4,5,4,4,4,5)
+                .expectNext(4,4,3,5,4,4,3,5)
                 .verifyComplete();
     }
 
