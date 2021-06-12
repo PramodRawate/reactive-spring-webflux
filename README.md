@@ -85,3 +85,14 @@ The output flux will have uppercase elements as follows:-
 ```shell
 "ADAM", "JACK", "JAY", "JENNY"
 ```
+
+### Back Pressure Support
+Subscriber can control the data flow from Publisher using following method:
+```shell
+thenRequest(long n):
+``` 
+Request the given amount of elements from the upstream Publisher.
+
+Also we can use **BaseSubscriber** - A simple base class for a Subscriber implementation that lets the user perform a **request(long)** and **cancel()** on it directly based on the specified conditions.
+
+Ex: Refer **FluxAndMonoBackPressureTest.java** for the examples. 
